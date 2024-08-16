@@ -1,5 +1,6 @@
 # Easy Shop
 
-**Framework **
+**Framework**
 
 * Tailwind CSS
+* daisyUI
