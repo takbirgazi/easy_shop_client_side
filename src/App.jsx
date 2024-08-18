@@ -1,12 +1,16 @@
-import React from 'react';
-import './App.css';
+import { Outlet } from 'react-router-dom'
+import './App.css'
+import Navbar from './Components/Navbar/Navbar'
 
 function App() {
 
   return (
-    <div>
-      <h2>Hello Word</h2>
-    </div>
+    <>
+      <Navbar></Navbar>
+      <div className="w-11/12 mx-auto">
+        <Outlet></Outlet>
+      </div>
+    </>
   )
 }
 

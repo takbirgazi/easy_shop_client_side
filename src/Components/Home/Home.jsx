@@ -1,9 +1,9 @@
-import React from 'react';
+import Products from "../Products/Products";
 
 const Home = () => {
     return (
         <div>
-            This is Home Page.
+            <Products></Products>
         </div>
     );
 };
