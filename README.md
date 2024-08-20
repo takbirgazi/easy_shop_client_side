@@ -10,3 +10,8 @@
 
 * Tailwind CSS
 * daisyUI
+
+**NPM Packages**
+
+* prop-types
+* axios
