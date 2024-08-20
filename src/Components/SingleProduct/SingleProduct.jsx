@@ -1,13 +1,14 @@
 import { Rating } from "@mui/material";
 import axios from "axios";
 import { useState } from "react";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 
 const SingleProduct = () => {
     const singlePage = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
     const singleProduct = singlePage.find(prod => prod.id === idInt);
+    const navigate = useNavigate();
 
 
     const [allproducts, setAllproducts] = useState([]);
@@ -19,6 +20,9 @@ const SingleProduct = () => {
             setLoading(false);
         });
     
+    const handleSingleProduct = (id) => {
+        navigate(`/singleProduct/${id}`);
+    }
 
     return (
         <div className="flex flex-col md:flex-row justify-between gap-4 w-full mt-4">
@@ -41,7 +45,7 @@ const SingleProduct = () => {
                 {
                     loading ? "Loading..." : <div>
                         {
-                            allproducts.map(product => <ul key={product.id}>
+                            allproducts.map(product => <ul key={product.id} onClick={() => handleSingleProduct(product.id)} className="cursor-pointer">
                                 <li className="py-1 border-b ">
                                     <div className="flex gap-2 items-center">
                                         <img className="h-14 w-14" src={product.image} alt={product.title} />
