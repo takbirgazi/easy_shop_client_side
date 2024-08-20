@@ -6,7 +6,7 @@
 * npm install
 * Run the project
 
-**Framework**
+**CSS Framework**
 
 * Tailwind CSS
 * daisyUI
